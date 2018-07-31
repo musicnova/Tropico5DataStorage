@@ -1,0 +1,121 @@
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set objShell = CreateObject("wscript.shell")
+
+result = MsgBox ("Скачаем новые данные из интернет?", vbYesNo + vbQuestion, "Запуск Linux")
+Select Case result
+Case vbNo
+	subresult = MsgBox ("Может пройдем курсы на coursera.org?", vbYesNo + vbInformation, "Бесплатное обучение")
+	Select Case subresult
+	Case vbNo
+		If objFSO.FileExists("C:\VLC\vlc.exe") Then
+			strCmd = ""
+			strCmd = strCmd & Chr(34) & "C:\VLC\vlc.exe" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--loop" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--directx-volume=0.99" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--no-autoscale" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "C:\BOOOOKS\current.xspf" & Chr(34)
+			objShell.Run strCmd, 1, False
+			Set WshShell = CreateObject("WScript.Shell")
+			WshShell.SendKeys "^r"
+			Wscript.Sleep 180000
+			strCmd = ""
+			strCmd = strCmd & Chr(34) & "C:\VLC\vlc.exe" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--loop" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--directx-volume=0.99" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--no-autoscale" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "C:\BOOOOKS\current.xspf" & Chr(34)
+			objShell.Run strCmd, 1, False
+			Wscript.Sleep 5000
+			test = MsgBox ("Готов немного поработать?", vbYesNo + vbQuestion, "Запуск Hadoop")
+		    strCmd = ""
+		    strCmd = strCmd & Chr(34) & "C:\VirtualBox\VBoxManage.exe" & Chr(34) & " " & Chr(34) & "startvm" & Chr(34)
+		    strCmd = strCmd & " "
+		    'strCmd = strCmd & Chr(34) & "01 - Hortonworks Docker Sandbox HDP" & Chr(34) & " " & Chr(34) & "--type" & Chr(34) & " " & Chr(34) & "gui" & Chr(34)
+			strCmd = strCmd & Chr(34) & "1ku" & Chr(34) & " " & Chr(34) & "--type" & Chr(34) & " " & Chr(34) & "gui" & Chr(34)
+		    objShell.Run strCmd, 1, True
+		    strCmd = ""
+		    strCmd = strCmd & Chr(34) & "C:\VirtualBox\VBoxManage.exe" & Chr(34) & " " & Chr(34) & "startvm" & Chr(34)
+		    strCmd = strCmd & " "
+		    'strCmd = strCmd & Chr(34) & "02 - Hortonworks Docker Sandbox HDP" & Chr(34) & " " & Chr(34) & "--type" & Chr(34) & " " & Chr(34) & "gui" & Chr(34)
+			strCmd = strCmd & Chr(34) & "2ku" & Chr(34) & " " & Chr(34) & "--type" & Chr(34) & " " & Chr(34) & "gui" & Chr(34)
+		    objShell.Run strCmd, 1, True
+		    strCmd = ""
+		    strCmd = strCmd & Chr(34) & "C:\VirtualBox\VBoxManage.exe" & Chr(34) & " " & Chr(34) & "startvm" & Chr(34)
+		    strCmd = strCmd & " "
+		    'strCmd = strCmd & Chr(34) & "03 - Hortonworks Docker Sandbox HDP" & Chr(34) & " " & Chr(34) & "--type" & Chr(34) & " " & Chr(34) & "gui" & Chr(34)
+			strCmd = strCmd & Chr(34) & "3ku" & Chr(34) & " " & Chr(34) & "--type" & Chr(34) & " " & Chr(34) & "gui" & Chr(34)
+		    objShell.Run strCmd, 1, True
+		Else MsgBox "VLC not installed properly", 16, "Failed .xspf"
+		End If
+	Case vbYes
+		If objFSO.FileExists("C:\Program Files (x86)\Mozilla Firefox\firefox.exe") Then
+			strCmd = ""
+			strCmd = strCmd & Chr(34) & "C:\WINDOWS\system32\notepad.exe" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "C:\AUTOOOOSTART\TODO.txt" & Chr(34)
+			objShell.Run strCmd, 1, False
+			strCmd = ""
+			strCmd = strCmd & Chr(34) & "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" & Chr(34)
+			objShell.Run strCmd, 1, False
+		Else MsgBox "Firefox not installed properly", 16, "Failed"
+		End If
+	End Select
+Case vbYes
+	subresult = MsgBox ("Запустить музыку на эти несколько минут?", vbYesNo + vbInformation, "Временные неудобства от Linux")
+	'http://askubuntu.com/questions/404665/how-to-start-virtual-box-machines-automatically-when-booting
+	If objFSO.FileExists("C:\Users\Home\Anaconda3\pythonw.exe") Then
+		strCmd = ""
+		strCmd = strCmd & Chr(34) & "C:\Program Files (x86)\Mozilla Firefox\firefox.exe" & Chr(34) & " " & Chr(34) & "https://avito.ru" & Chr(34) & " " & Chr(34) & "http://python-visualization.github.io/folium/docs-v0.5.0/quickstart.html#Markers" & Chr(34)
+	    objShell.Run strCmd, 1, False		
+		strCmd = ""
+		strCmd = strCmd & Chr(34) & "C:\Users\Home\AppData\Local\SourceTree\Update.exe" & Chr(34) & " " & Chr(34) & "--processStart" & Chr(34)
+		strCmd = strCmd & " "
+		strCmd = strCmd & Chr(34) & "SourceTree.exe" & Chr(34)
+	    objShell.Run strCmd, 1, False
+		strCmd = ""
+		strCmd = strCmd & Chr(34) & "C:\Users\Home\Anaconda3\python.exe" & Chr(34) & " " & Chr(34) & "C:\Users\Home\Anaconda3\cwp.py" & Chr(34)
+		strCmd = strCmd & " "
+		strCmd = strCmd & Chr(34) & "C:\Users\Home\Anaconda3" & Chr(34) & " " & Chr(34) & "C:\Users\Home\Anaconda3\python.exe" & Chr(34)
+		strCmd = strCmd & " "
+		strCmd = strCmd & Chr(34) & "C:\Users\Home\Anaconda3\Scripts\jupyter-notebook-script.py" & Chr(34) & " " & Chr(34) & "%USERPROFILE%" & Chr(34)
+	    objShell.Run strCmd, 1, False
+	Else MsgBox "Anaconda3 not installed properly", 16, "Failed"
+	End If
+
+	Select Case subresult
+	Case vbYes
+		If objFSO.FileExists("C:\VLC\vlc.exe") Then
+			strCmd = ""
+			strCmd = strCmd & Chr(34) & "C:\VLC\vlc.exe" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--random" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--loop" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--video-title-timeout=2147483647" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--directx-volume=1.11" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--video-x=320" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--video-y=240" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "--no-autoscale" & Chr(34)
+			strCmd = strCmd & " "
+			strCmd = strCmd & Chr(34) & "C:\RIFF_YOUTUBE" & Chr(34)
+			objShell.Run strCmd, 1, True
+			strCmd = ""
+			strCmd = strCmd & Chr(34) & "C:\AnyLogic8PLE\AnyLogic.exe" & Chr(34) & " " & Chr(34) & "C:\Users\Home\Models\Dollar\Dollar.alp" & Chr(34)
+			objShell.Run strCmd, 1, False
+		Else MsgBox "VLC not installed properly", 16, "Failed"
+		End If
+	End Select
+End Select
