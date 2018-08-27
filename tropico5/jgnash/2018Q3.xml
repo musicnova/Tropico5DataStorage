@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?fileVersion 2.1?>
+<object-stream>
+  <list id="1">
+    <CurrencyNode id="2" uuid="f64560e1-1ce9-4c5d-9afe-101b52d29a27" symbol="USD" scale="2" prefix="$" suffix="">
+      <locale id="3">ru_RU</locale>
+    </CurrencyNode>
+    <CurrencyNode id="4" uuid="395de3bd-3efd-4485-95e8-3c38567e919b" symbol="EUR" scale="2" prefix="€" suffix="">
+      <locale reference="3"/>
+    </CurrencyNode>
+    <CurrencyNode id="5" uuid="882c3b47-d7e7-4d14-a52e-f80edb2ee0b3" symbol="RUB" scale="2" prefix="руб." suffix="">
+      <locale reference="3"/>
+    </CurrencyNode>
+    <Config id="6" uuid="2e790826-08bb-425a-873a-716882c9ec8a">
+      <defaultCurrency reference="5"/>
+      <name>DefaultConfig</name>
+      <accountSeparator>:</accountSeparator>
+      <fileVersion>2.1</fileVersion>
+      <transactionNumberItems id="7"/>
+    </Config>
+    <RootAccount id="8" uuid="dcdf5ed3-7ff0-45ed-aa1d-b8b613dfba4b" placeHolder="false" locked="false" visible="true" name="Список счетов" description="Список счетов">
+      <accountType>ROOT</accountType>
+      <excludedFromBudget>false</excludedFromBudget>
+      <notes></notes>
+      <currencyNode reference="5"/>
+      <children id="9">
+        <Account id="10" uuid="a5f5636f-6144-4ff9-a88b-84c68489117f" placeHolder="true" locked="false" visible="true" name="Bank Accounts" description="Bank Accounts">
+          <accountType>BANK</accountType>
+          <parentAccount class="RootAccount" reference="8"/>
+          <excludedFromBudget>false</excludedFromBudget>
+          <notes></notes>
+          <currencyNode reference="5"/>
+          <children id="11">
+            <Account id="12" uuid="b18665c0-1e16-4623-912f-dc248ea7ae7a" placeHolder="false" locked="false" visible="true" name="Cash" description="Cash Account">
+              <accountType>BANK</accountType>
+              <parentAccount reference="10"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="13"/>
+              <transactions id="14"/>
+              <securities id="15"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="16"/>
+            </Account>
+            <Account id="17" uuid="f2de165e-6dcc-401f-b615-82a7d37e414f" placeHolder="false" locked="false" visible="true" name="Savings" description="Savings Account">
+              <accountType>BANK</accountType>
+              <parentAccount reference="10"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="18"/>
+              <transactions id="19"/>
+              <securities id="20"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="21"/>
+            </Account>
+          </children>
+          <transactions id="22"/>
+          <securities id="23"/>
+          <accountBalance>0</accountBalance>
+          <reconciledBalance>0</reconciledBalance>
+          <accountNumber></accountNumber>
+          <propertyMap id="24"/>
+        </Account>
+        <Account id="25" uuid="9ec3738b-c858-4547-bed4-a700e0797092" placeHolder="true" locked="false" visible="true" name="Expense Accounts" description="Expense Accounts">
+          <accountType>EXPENSE</accountType>
+          <parentAccount class="RootAccount" reference="8"/>
+          <excludedFromBudget>false</excludedFromBudget>
+          <notes></notes>
+          <currencyNode reference="5"/>
+          <children id="26">
+            <Account id="27" uuid="a057cf60-5da1-4286-b8ac-56a9232c118c" placeHolder="true" locked="false" visible="true" name="Automobile" description="Description">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="28">
+                <Account id="29" uuid="ffe1b7da-7d47-4e43-84f5-d03f8e56ba08" placeHolder="false" locked="false" visible="true" name="Fuel" description="Fuel Expenses">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="27"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="30"/>
+                  <transactions id="31"/>
+                  <securities id="32"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="33"/>
+                </Account>
+                <Account id="34" uuid="506249df-2ada-4f01-9974-9ea258fa2556" placeHolder="false" locked="false" visible="true" name="Insurance" description="Auto Insurance">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="27"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="35"/>
+                  <transactions id="36"/>
+                  <securities id="37"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="38"/>
+                </Account>
+                <Account id="39" uuid="3e9d715c-9a6c-4006-afd7-45dc1d824236" placeHolder="false" locked="false" visible="true" name="Service" description="Auto Services">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="27"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes>Oil, tires, etc.</notes>
+                  <currencyNode reference="5"/>
+                  <children id="40"/>
+                  <transactions id="41"/>
+                  <securities id="42"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="43"/>
+                </Account>
+              </children>
+              <transactions id="44"/>
+              <securities id="45"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="46"/>
+            </Account>
+            <Account id="47" uuid="0463473a-73c8-4714-9b5a-6731a3d570a9" placeHolder="true" locked="false" visible="true" name="Bills" description="Bills">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="48">
+                <Account id="49" uuid="3a73c9a3-9c97-4718-ba4a-c9ad257c5328" placeHolder="false" locked="false" visible="true" name="Cell Phone" description="Cell Phone">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="47"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="50"/>
+                  <transactions id="51"/>
+                  <securities id="52"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="53"/>
+                </Account>
+                <Account id="54" uuid="e6500118-0d91-4383-9a2d-a11393ed5aed" placeHolder="false" locked="false" visible="true" name="Telephone" description="Telephone">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="47"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="55"/>
+                  <transactions id="56"/>
+                  <securities id="57"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="58"/>
+                </Account>
+              </children>
+              <transactions id="59"/>
+              <securities id="60"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="61"/>
+            </Account>
+            <Account id="62" uuid="9cad4de4-d557-4953-bfc6-ab9e877b9db1" placeHolder="true" locked="false" visible="true" name="Food" description="Food">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="63">
+                <Account id="64" uuid="f15d60c9-c723-4f74-a83f-db3c711c3b39" placeHolder="false" locked="false" visible="true" name="Dining" description="Dining Out">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="62"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="65"/>
+                  <transactions id="66"/>
+                  <securities id="67"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="68"/>
+                </Account>
+                <Account id="69" uuid="6764f482-5352-4ca6-bbfd-d850a1aef35f" placeHolder="false" locked="false" visible="true" name="Groceries" description="Groceries">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="62"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="70"/>
+                  <transactions id="71"/>
+                  <securities id="72"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="73"/>
+                </Account>
+              </children>
+              <transactions id="74"/>
+              <securities id="75"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="76"/>
+            </Account>
+            <Account id="77" uuid="d6314633-181b-4d31-8da5-a3586b03f456" placeHolder="true" locked="false" visible="true" name="Health" description="Health">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="78">
+                <Account id="79" uuid="0af2f152-1b98-4b02-b892-0137040351d7" placeHolder="false" locked="false" visible="true" name="Insurance" description="Medical insurance">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="77"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="80"/>
+                  <transactions id="81"/>
+                  <securities id="82"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="83"/>
+                </Account>
+                <Account id="84" uuid="06374d55-d8b0-4331-8c5e-3a8ae1cc2621" placeHolder="false" locked="false" visible="true" name="Major Medical" description="Major Medical Expense">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="77"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="85"/>
+                  <transactions id="86"/>
+                  <securities id="87"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="88"/>
+                </Account>
+                <Account id="89" uuid="293e1fc2-cdda-41a1-b5aa-92a7ea74fcda" placeHolder="false" locked="false" visible="true" name="Medication" description="Medication">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="77"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="90"/>
+                  <transactions id="91"/>
+                  <securities id="92"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="93"/>
+                </Account>
+                <Account id="94" uuid="ff368193-e670-4b6b-8174-9d910a5ec4a0" placeHolder="false" locked="false" visible="true" name="Office" description="Office Visits">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="77"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="95"/>
+                  <transactions id="96"/>
+                  <securities id="97"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="98"/>
+                </Account>
+                <Account id="99" uuid="e6b97067-3ed6-4d88-a36a-87aaa8eadea1" placeHolder="false" locked="false" visible="true" name="Wellness" description="Wellness">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="77"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes>Hait cuts, etc.</notes>
+                  <currencyNode reference="5"/>
+                  <children id="100"/>
+                  <transactions id="101"/>
+                  <securities id="102"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="103"/>
+                </Account>
+              </children>
+              <transactions id="104"/>
+              <securities id="105"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="106"/>
+            </Account>
+            <Account id="107" uuid="c733b336-d0f8-49ab-963f-dc593f375c95" placeHolder="true" locked="false" visible="true" name="Household" description="Houseold">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="108">
+                <Account id="109" uuid="2621066d-6b70-42df-bc9d-4a5b1881fd2c" placeHolder="false" locked="false" visible="true" name="Appliances/Furniture" description="Appliances and Furniture">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="107"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="110"/>
+                  <transactions id="111"/>
+                  <securities id="112"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="113"/>
+                </Account>
+                <Account id="114" uuid="972b3391-e22d-4d3f-b14a-44679b11d227" placeHolder="false" locked="false" visible="true" name="Clothing/Bedding" description="Clothing and Bedding">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="107"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="115"/>
+                  <transactions id="116"/>
+                  <securities id="117"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="118"/>
+                </Account>
+                <Account id="119" uuid="29b72435-6a60-4d18-8c6d-e8995f012835" placeHolder="false" locked="false" visible="true" name="Electronics" description="Electronics for the house">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="107"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="120"/>
+                  <transactions id="121"/>
+                  <securities id="122"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="123"/>
+                </Account>
+                <Account id="124" uuid="38394981-b796-46f3-b38c-33a3eb78e0ac" placeHolder="false" locked="false" visible="true" name="Misc Consumables" description="Misc Consumables">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="107"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes>Stamps, batteries, etc</notes>
+                  <currencyNode reference="5"/>
+                  <children id="125"/>
+                  <transactions id="126"/>
+                  <securities id="127"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="128"/>
+                </Account>
+                <Account id="129" uuid="2fb9eebc-6041-450f-b0ea-900658ccedda" placeHolder="false" locked="false" visible="true" name="Toiletries" description="Toiletries">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="107"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="130"/>
+                  <transactions id="131"/>
+                  <securities id="132"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="133"/>
+                </Account>
+              </children>
+              <transactions id="134"/>
+              <securities id="135"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="136"/>
+            </Account>
+            <Account id="137" uuid="f433e20d-27da-4480-b7d2-630b49799ccb" placeHolder="false" locked="false" visible="true" name="Miscellaneous" description="Miscellaneous">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="138">
+                <Account id="139" uuid="2e543c1b-4c75-4ab3-8fd8-3d1dc50038a6" placeHolder="false" locked="false" visible="true" name="Bank Fees" description="Bank Fees">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="137"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes>ATM Fees, OD protection, etc.</notes>
+                  <currencyNode reference="5"/>
+                  <children id="140"/>
+                  <transactions id="141"/>
+                  <securities id="142"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="143"/>
+                </Account>
+                <Account id="144" uuid="640be206-d58b-4edf-8936-75f569c44761" placeHolder="false" locked="false" visible="true" name="Charitable Contribution" description="Charitable Contributions">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="137"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="145"/>
+                  <transactions id="146"/>
+                  <securities id="147"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="148"/>
+                </Account>
+                <Account id="149" uuid="3effd2fe-c85c-404d-ac40-abd7674d0392" placeHolder="false" locked="false" visible="true" name="Life Insurance" description="Life Insurance">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="137"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="150"/>
+                  <transactions id="151"/>
+                  <securities id="152"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="153"/>
+                </Account>
+              </children>
+              <transactions id="154"/>
+              <securities id="155"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="156"/>
+            </Account>
+            <Account id="157" uuid="4550fe9e-a345-4e52-af18-b983cf4bd380" placeHolder="true" locked="false" visible="true" name="Recreation" description="">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="158">
+                <Account id="159" uuid="1f973249-71b5-4206-b4bd-23e88e81bf20" placeHolder="false" locked="false" visible="true" name="Books / Magazines" description="Books and Magazines">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="157"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes>Books and magzines</notes>
+                  <currencyNode reference="5"/>
+                  <children id="160"/>
+                  <transactions id="161"/>
+                  <securities id="162"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="163"/>
+                </Account>
+                <Account id="164" uuid="d42a8607-e4fa-4fda-af53-66acc5006e00" placeHolder="false" locked="false" visible="true" name="Concerts / Movies" description="">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="157"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="165"/>
+                  <transactions id="166"/>
+                  <securities id="167"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="168"/>
+                </Account>
+                <Account id="169" uuid="0c6f67ac-090d-48df-92ed-81f58a611486" placeHolder="false" locked="false" visible="true" name="Hobbies" description="Misc Hobbies">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="157"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="170"/>
+                  <transactions id="171"/>
+                  <securities id="172"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="173"/>
+                </Account>
+                <Account id="174" uuid="9f389e37-2d74-4ef7-9dc9-e9c71f61c9cb" placeHolder="false" locked="false" visible="true" name="Lodging" description="Hotels / Etc.">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="157"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="175"/>
+                  <transactions id="176"/>
+                  <securities id="177"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="178"/>
+                </Account>
+                <Account id="179" uuid="a4393409-d366-4aab-b86a-fde1b65a02aa" placeHolder="false" locked="false" visible="true" name="Misc" description="Misc">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="157"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="180"/>
+                  <transactions id="181"/>
+                  <securities id="182"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="183"/>
+                </Account>
+                <Account id="184" uuid="6d6bc1af-734a-42b2-aa5c-30f15e2bfa54" placeHolder="false" locked="false" visible="true" name="Subscriptions" description="Magazine Subscriptions">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="157"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="185"/>
+                  <transactions id="186"/>
+                  <securities id="187"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="188"/>
+                </Account>
+              </children>
+              <transactions id="189"/>
+              <securities id="190"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="191"/>
+            </Account>
+            <Account id="192" uuid="f12b1e5d-9c38-4018-9aeb-d1f348192067" placeHolder="true" locked="false" visible="true" name="Taxes" description="Description">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="25"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="193">
+                <Account id="194" uuid="8350f884-3be2-4cd1-89b7-07b63157de61" placeHolder="false" locked="false" visible="true" name="County" description="County tax">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="192"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="195"/>
+                  <transactions id="196"/>
+                  <securities id="197"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="198"/>
+                </Account>
+                <Account id="199" uuid="63f7b09f-4aba-438f-ba59-292c2452a950" placeHolder="false" locked="false" visible="true" name="Federal" description="Description">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="192"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="200"/>
+                  <transactions id="201"/>
+                  <securities id="202"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="203"/>
+                </Account>
+                <Account id="204" uuid="ff4549ee-378e-4eaf-9568-72d7d5a23a9f" placeHolder="false" locked="false" visible="true" name="Medicare" description="">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="192"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="205"/>
+                  <transactions id="206"/>
+                  <securities id="207"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="208"/>
+                </Account>
+                <Account id="209" uuid="331a35e4-6fa3-45f7-9bd1-a846ff09f028" placeHolder="false" locked="false" visible="true" name="Social Security" description="">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="192"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="210"/>
+                  <transactions id="211"/>
+                  <securities id="212"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="213"/>
+                </Account>
+                <Account id="214" uuid="f5b7ab0d-8a52-44c5-a540-a74d29b900ee" placeHolder="false" locked="false" visible="true" name="State" description="Description">
+                  <accountType>EXPENSE</accountType>
+                  <parentAccount reference="192"/>
+                  <excludedFromBudget>false</excludedFromBudget>
+                  <notes></notes>
+                  <currencyNode reference="5"/>
+                  <children id="215"/>
+                  <transactions id="216"/>
+                  <securities id="217"/>
+                  <accountBalance>0</accountBalance>
+                  <reconciledBalance>0</reconciledBalance>
+                  <accountNumber></accountNumber>
+                  <propertyMap id="218"/>
+                </Account>
+              </children>
+              <transactions id="219"/>
+              <securities id="220"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="221"/>
+            </Account>
+          </children>
+          <transactions id="222"/>
+          <securities id="223"/>
+          <accountBalance>0</accountBalance>
+          <reconciledBalance>0</reconciledBalance>
+          <accountNumber></accountNumber>
+          <propertyMap id="224"/>
+        </Account>
+        <Account id="225" uuid="439a76a2-a8eb-43e2-9299-acc18cfe3171" placeHolder="true" locked="false" visible="true" name="Income Accounts" description="Income Accounts">
+          <accountType>INCOME</accountType>
+          <parentAccount class="RootAccount" reference="8"/>
+          <excludedFromBudget>false</excludedFromBudget>
+          <notes></notes>
+          <currencyNode reference="5"/>
+          <children id="226">
+            <Account id="227" uuid="2cdd3379-6645-4430-80e2-91bf229718d4" placeHolder="false" locked="false" visible="true" name="Income - Non taxable" description="Non taxable income">
+              <accountType>INCOME</accountType>
+              <parentAccount reference="225"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="228"/>
+              <transactions id="229"/>
+              <securities id="230"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="231"/>
+            </Account>
+            <Account id="232" uuid="21ffe599-7b64-474b-a683-dfba10cb26bf" placeHolder="false" locked="false" visible="true" name="Interest" description="Interest Income">
+              <accountType>INCOME</accountType>
+              <parentAccount reference="225"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="233"/>
+              <transactions id="234"/>
+              <securities id="235"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="236"/>
+            </Account>
+            <Account id="237" uuid="1f7b769d-6e56-408e-a04c-d783486893e7" placeHolder="false" locked="false" visible="true" name="Other Income" description="Other">
+              <accountType>INCOME</accountType>
+              <parentAccount reference="225"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="238"/>
+              <transactions id="239"/>
+              <securities id="240"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="241"/>
+            </Account>
+            <Account id="242" uuid="21ae356e-5691-490e-959a-b5b06afe063a" placeHolder="false" locked="false" visible="true" name="Salary" description="Salary">
+              <accountType>INCOME</accountType>
+              <parentAccount reference="225"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="243"/>
+              <transactions id="244"/>
+              <securities id="245"/>
+              <accountBalance>0</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <propertyMap id="246"/>
+            </Account>
+          </children>
+          <transactions id="247"/>
+          <securities id="248"/>
+          <accountBalance>0</accountBalance>
+          <reconciledBalance>0</reconciledBalance>
+          <accountNumber>95</accountNumber>
+          <propertyMap id="249"/>
+        </Account>
+        <Account id="250" uuid="4779ea53-65d8-4480-82f2-779eba3f3223" placeHolder="false" locked="false" visible="false" name="Opening Balances" description="Opening Balances">
+          <accountType>EQUITY</accountType>
+          <parentAccount class="RootAccount" reference="8"/>
+          <excludedFromBudget>false</excludedFromBudget>
+          <notes></notes>
+          <currencyNode reference="5"/>
+          <children id="251"/>
+          <transactions id="252"/>
+          <securities id="253"/>
+          <accountBalance>0</accountBalance>
+          <reconciledBalance>0</reconciledBalance>
+          <accountNumber></accountNumber>
+          <propertyMap id="254"/>
+        </Account>
+      </children>
+      <transactions id="255"/>
+      <securities id="256"/>
+      <accountNumber></accountNumber>
+      <propertyMap id="257"/>
+    </RootAccount>
+  </list>
+</object-stream>
