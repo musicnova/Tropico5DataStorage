@@ -2,41 +2,44 @@
 <?fileVersion 2.1?>
 <object-stream>
   <list id="1">
-    <CurrencyNode id="2" uuid="882c3b47-d7e7-4d14-a52e-f80edb2ee0b3" symbol="RUB" scale="2" prefix="руб." suffix="">
+    <CurrencyNode id="2" uuid="f64560e1-1ce9-4c5d-9afe-101b52d29a27" symbol="USD" scale="2" prefix="$" suffix="">
       <locale id="3">ru_RU</locale>
     </CurrencyNode>
     <CurrencyNode id="4" uuid="395de3bd-3efd-4485-95e8-3c38567e919b" symbol="EUR" scale="2" prefix="€" suffix="">
       <locale reference="3"/>
     </CurrencyNode>
-    <CurrencyNode id="5" uuid="f64560e1-1ce9-4c5d-9afe-101b52d29a27" symbol="USD" scale="2" prefix="$" suffix="">
+    <CurrencyNode id="5" uuid="882c3b47-d7e7-4d14-a52e-f80edb2ee0b3" symbol="RUB" scale="2" prefix="руб." suffix="">
       <locale reference="3"/>
     </CurrencyNode>
     <Config id="6" uuid="2e790826-08bb-425a-873a-716882c9ec8a">
-      <defaultCurrency reference="2"/>
+      <defaultCurrency reference="5"/>
       <name>DefaultConfig</name>
       <accountSeparator>:</accountSeparator>
       <fileVersion>2.1</fileVersion>
-      <transactionNumberItems id="7"/>
+      <transactionNumberItems id="7">
+        <string>Электронный перевод</string>
+        <string>Опер.</string>
+      </transactionNumberItems>
     </Config>
     <RootAccount id="8" uuid="dcdf5ed3-7ff0-45ed-aa1d-b8b613dfba4b" placeHolder="false" locked="false" visible="true" name="Список счетов" description="Список счетов">
       <accountType>ROOT</accountType>
       <excludedFromBudget>false</excludedFromBudget>
       <notes></notes>
-      <currencyNode reference="2"/>
+      <currencyNode reference="5"/>
       <children id="9">
         <Account id="10" uuid="a5f5636f-6144-4ff9-a88b-84c68489117f" placeHolder="true" locked="false" visible="true" name="Bank Accounts" description="Bank Accounts">
           <accountType>BANK</accountType>
           <parentAccount class="RootAccount" reference="8"/>
           <excludedFromBudget>false</excludedFromBudget>
           <notes></notes>
-          <currencyNode reference="2"/>
+          <currencyNode reference="5"/>
           <children id="11">
             <Account id="12" uuid="b18665c0-1e16-4623-912f-dc248ea7ae7a" placeHolder="false" locked="false" visible="true" name="Cash" description="Cash Account">
               <accountType>BANK</accountType>
               <parentAccount reference="10"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="13"/>
               <transactions id="14"/>
               <securities id="15"/>
@@ -50,7 +53,7 @@
               <parentAccount reference="10"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="18"/>
               <transactions id="19"/>
               <securities id="20"/>
@@ -72,21 +75,21 @@
           <parentAccount class="RootAccount" reference="8"/>
           <excludedFromBudget>false</excludedFromBudget>
           <notes></notes>
-          <currencyNode reference="2"/>
+          <currencyNode reference="5"/>
           <children id="26">
             <Account id="27" uuid="a057cf60-5da1-4286-b8ac-56a9232c118c" placeHolder="true" locked="false" visible="true" name="Automobile" description="Description">
               <accountType>EXPENSE</accountType>
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="28">
                 <Account id="29" uuid="ffe1b7da-7d47-4e43-84f5-d03f8e56ba08" placeHolder="false" locked="false" visible="true" name="Fuel" description="Fuel Expenses">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="27"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="30"/>
                   <transactions id="31"/>
                   <securities id="32"/>
@@ -100,7 +103,7 @@
                   <parentAccount reference="27"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="35"/>
                   <transactions id="36"/>
                   <securities id="37"/>
@@ -114,7 +117,7 @@
                   <parentAccount reference="27"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes>Oil, tires, etc.</notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="40"/>
                   <transactions id="41"/>
                   <securities id="42"/>
@@ -136,14 +139,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="48">
                 <Account id="49" uuid="3a73c9a3-9c97-4718-ba4a-c9ad257c5328" placeHolder="false" locked="false" visible="true" name="Cell Phone" description="Cell Phone">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="47"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="50"/>
                   <transactions id="51"/>
                   <securities id="52"/>
@@ -157,7 +160,7 @@
                   <parentAccount reference="47"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="55"/>
                   <transactions id="56"/>
                   <securities id="57"/>
@@ -179,14 +182,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="63">
                 <Account id="64" uuid="f15d60c9-c723-4f74-a83f-db3c711c3b39" placeHolder="false" locked="false" visible="true" name="Dining" description="Dining Out">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="62"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="65"/>
                   <transactions id="66"/>
                   <securities id="67"/>
@@ -200,7 +203,7 @@
                   <parentAccount reference="62"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="70"/>
                   <transactions id="71"/>
                   <securities id="72"/>
@@ -222,14 +225,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="78">
                 <Account id="79" uuid="0af2f152-1b98-4b02-b892-0137040351d7" placeHolder="false" locked="false" visible="true" name="Insurance" description="Medical insurance">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="77"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="80"/>
                   <transactions id="81"/>
                   <securities id="82"/>
@@ -243,7 +246,7 @@
                   <parentAccount reference="77"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="85"/>
                   <transactions id="86"/>
                   <securities id="87"/>
@@ -257,7 +260,7 @@
                   <parentAccount reference="77"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="90"/>
                   <transactions id="91"/>
                   <securities id="92"/>
@@ -271,7 +274,7 @@
                   <parentAccount reference="77"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="95"/>
                   <transactions id="96"/>
                   <securities id="97"/>
@@ -285,7 +288,7 @@
                   <parentAccount reference="77"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes>Hait cuts, etc.</notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="100"/>
                   <transactions id="101"/>
                   <securities id="102"/>
@@ -307,14 +310,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="108">
                 <Account id="109" uuid="2621066d-6b70-42df-bc9d-4a5b1881fd2c" placeHolder="false" locked="false" visible="true" name="Appliances/Furniture" description="Appliances and Furniture">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="107"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="110"/>
                   <transactions id="111"/>
                   <securities id="112"/>
@@ -328,7 +331,7 @@
                   <parentAccount reference="107"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="115"/>
                   <transactions id="116"/>
                   <securities id="117"/>
@@ -342,7 +345,7 @@
                   <parentAccount reference="107"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="120"/>
                   <transactions id="121"/>
                   <securities id="122"/>
@@ -356,7 +359,7 @@
                   <parentAccount reference="107"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes>Stamps, batteries, etc</notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="125"/>
                   <transactions id="126"/>
                   <securities id="127"/>
@@ -370,7 +373,7 @@
                   <parentAccount reference="107"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="130"/>
                   <transactions id="131"/>
                   <securities id="132"/>
@@ -392,14 +395,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="138">
                 <Account id="139" uuid="2e543c1b-4c75-4ab3-8fd8-3d1dc50038a6" placeHolder="false" locked="false" visible="true" name="Bank Fees" description="Bank Fees">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="137"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes>ATM Fees, OD protection, etc.</notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="140"/>
                   <transactions id="141"/>
                   <securities id="142"/>
@@ -413,7 +416,7 @@
                   <parentAccount reference="137"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="145"/>
                   <transactions id="146"/>
                   <securities id="147"/>
@@ -427,7 +430,7 @@
                   <parentAccount reference="137"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="150"/>
                   <transactions id="151"/>
                   <securities id="152"/>
@@ -449,14 +452,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="158">
                 <Account id="159" uuid="1f973249-71b5-4206-b4bd-23e88e81bf20" placeHolder="false" locked="false" visible="true" name="Books / Magazines" description="Books and Magazines">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="157"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes>Books and magzines</notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="160"/>
                   <transactions id="161"/>
                   <securities id="162"/>
@@ -470,7 +473,7 @@
                   <parentAccount reference="157"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="165"/>
                   <transactions id="166"/>
                   <securities id="167"/>
@@ -484,7 +487,7 @@
                   <parentAccount reference="157"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="170"/>
                   <transactions id="171"/>
                   <securities id="172"/>
@@ -498,7 +501,7 @@
                   <parentAccount reference="157"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="175"/>
                   <transactions id="176"/>
                   <securities id="177"/>
@@ -512,7 +515,7 @@
                   <parentAccount reference="157"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="180"/>
                   <transactions id="181"/>
                   <securities id="182"/>
@@ -526,7 +529,7 @@
                   <parentAccount reference="157"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="185"/>
                   <transactions id="186"/>
                   <securities id="187"/>
@@ -548,14 +551,14 @@
               <parentAccount reference="25"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="193">
                 <Account id="194" uuid="8350f884-3be2-4cd1-89b7-07b63157de61" placeHolder="false" locked="false" visible="true" name="County" description="County tax">
                   <accountType>EXPENSE</accountType>
                   <parentAccount reference="192"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="195"/>
                   <transactions id="196"/>
                   <securities id="197"/>
@@ -569,7 +572,7 @@
                   <parentAccount reference="192"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="200"/>
                   <transactions id="201"/>
                   <securities id="202"/>
@@ -583,7 +586,7 @@
                   <parentAccount reference="192"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="205"/>
                   <transactions id="206"/>
                   <securities id="207"/>
@@ -597,7 +600,7 @@
                   <parentAccount reference="192"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="210"/>
                   <transactions id="211"/>
                   <securities id="212"/>
@@ -611,7 +614,7 @@
                   <parentAccount reference="192"/>
                   <excludedFromBudget>false</excludedFromBudget>
                   <notes></notes>
-                  <currencyNode reference="2"/>
+                  <currencyNode reference="5"/>
                   <children id="215"/>
                   <transactions id="216"/>
                   <securities id="217"/>
@@ -641,14 +644,14 @@
           <parentAccount class="RootAccount" reference="8"/>
           <excludedFromBudget>false</excludedFromBudget>
           <notes></notes>
-          <currencyNode reference="2"/>
+          <currencyNode reference="5"/>
           <children id="226">
             <Account id="227" uuid="2cdd3379-6645-4430-80e2-91bf229718d4" placeHolder="false" locked="false" visible="true" name="Income - Non taxable" description="Non taxable income">
               <accountType>INCOME</accountType>
               <parentAccount reference="225"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="228"/>
               <transactions id="229"/>
               <securities id="230"/>
@@ -662,7 +665,7 @@
               <parentAccount reference="225"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="233"/>
               <transactions id="234"/>
               <securities id="235"/>
@@ -676,7 +679,7 @@
               <parentAccount reference="225"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="238"/>
               <transactions id="239"/>
               <securities id="240"/>
@@ -690,7 +693,7 @@
               <parentAccount reference="225"/>
               <excludedFromBudget>false</excludedFromBudget>
               <notes></notes>
-              <currencyNode reference="2"/>
+              <currencyNode reference="5"/>
               <children id="243"/>
               <transactions id="244"/>
               <securities id="245"/>
@@ -712,7 +715,7 @@
           <parentAccount class="RootAccount" reference="8"/>
           <excludedFromBudget>false</excludedFromBudget>
           <notes></notes>
-          <currencyNode reference="2"/>
+          <currencyNode reference="5"/>
           <children id="251"/>
           <transactions id="252"/>
           <securities id="253"/>
@@ -726,51 +729,159 @@
           <parentAccount class="RootAccount" reference="8"/>
           <excludedFromBudget>false</excludedFromBudget>
           <notes></notes>
-          <currencyNode reference="2"/>
-          <children id="256"/>
-          <transactions id="257"/>
-          <securities id="258"/>
+          <currencyNode reference="5"/>
+          <children id="256">
+            <Account id="257" uuid="38477dec-bf3e-4cb7-8973-b89ec9b8fba2" placeHolder="false" locked="false" visible="true" name="НАЛИЧНЫЕ_КОШЕЛЕК" description="Наличные кошелек">
+              <accountType>EXPENSE</accountType>
+              <parentAccount reference="255"/>
+              <excludedFromBudget>false</excludedFromBudget>
+              <notes></notes>
+              <currencyNode reference="5"/>
+              <children id="258"/>
+              <transactions id="259">
+                <Transaction id="260" uuid="82b1ed06-3ee1-4dbf-ab14-6615a43eb5ec">
+                  <date id="261">2018-08-26 21:00:00.0 UTC</date>
+                  <dateEntered id="262">2018-08-27 04:06:36.297 UTC</dateEntered>
+                  <number></number>
+                  <payee>Юра</payee>
+                  <memo></memo>
+                  <transactionEntries id="263">
+                    <TransactionEntry id="264">
+                      <hash>0</hash>
+                      <transactionTag>BANK</transactionTag>
+                      <debitAccount id="265" uuid="cf145b20-04e4-4e77-ae01-40961957aca4" placeHolder="false" locked="false" visible="true" name="УСТАВНОЙ_КАПИТАЛ" description="Уставной капитал">
+                        <accountType>INCOME</accountType>
+                        <parentAccount id="266" uuid="2020cc06-d6e0-477e-855c-e3840ef24004" placeHolder="false" locked="false" visible="true" name="ПАССИВЫ" description="Пассивы">
+                          <accountType>EQUITY</accountType>
+                          <parentAccount class="RootAccount" reference="8"/>
+                          <excludedFromBudget>false</excludedFromBudget>
+                          <notes></notes>
+                          <currencyNode reference="5"/>
+                          <children id="267">
+                            <Account id="268" uuid="b0f3f183-c057-4fd3-8858-d6967ccc87a0" placeHolder="false" locked="false" visible="true" name="ДОПОЛНИТЕЛЬНЫЙ_КАПИТАЛ" description="Дополнительный капитал">
+                              <accountType>INCOME</accountType>
+                              <parentAccount reference="266"/>
+                              <excludedFromBudget>false</excludedFromBudget>
+                              <notes></notes>
+                              <currencyNode reference="5"/>
+                              <children id="269"/>
+                              <transactions id="270">
+                                <Transaction id="271" uuid="1065c0cd-7803-42e0-a355-f77fa9adac11">
+                                  <date id="272">2018-08-26 21:00:00.0 UTC</date>
+                                  <dateEntered id="273">2018-08-27 04:11:50.139 UTC</dateEntered>
+                                  <number></number>
+                                  <payee>Я</payee>
+                                  <memo>Зарплата 2018-AUG-01</memo>
+                                  <transactionEntries id="274">
+                                    <TransactionEntry id="275">
+                                      <hash>0</hash>
+                                      <transactionTag>BANK</transactionTag>
+                                      <debitAccount reference="268"/>
+                                      <creditAccount id="276" uuid="4b5d157d-5f2d-4d3b-b2f2-409a0ef21ba1" placeHolder="false" locked="false" visible="true" name="СЧЕТ_СБЕРБАНК_РУБЛИ" description="Счет Сбербанк рубли">
+                                        <accountType>EXPENSE</accountType>
+                                        <parentAccount reference="255"/>
+                                        <excludedFromBudget>false</excludedFromBudget>
+                                        <notes></notes>
+                                        <currencyNode reference="5"/>
+                                        <children id="277"/>
+                                        <transactions id="278">
+                                          <Transaction reference="271"/>
+                                        </transactions>
+                                        <securities id="279"/>
+                                        <accountBalance>1.00</accountBalance>
+                                        <reconciledBalance>0</reconciledBalance>
+                                        <accountNumber></accountNumber>
+                                        <bankId></bankId>
+                                        <propertyMap id="280"/>
+                                      </creditAccount>
+                                      <creditAmount>1.00</creditAmount>
+                                      <debitAmount>-1.00</debitAmount>
+                                      <creditReconciled>NOT_RECONCILED</creditReconciled>
+                                      <debitReconciled>NOT_RECONCILED</debitReconciled>
+                                      <memo>Зарплата 2018-AUG-01</memo>
+                                    </TransactionEntry>
+                                  </transactionEntries>
+                                </Transaction>
+                              </transactions>
+                              <securities id="281"/>
+                              <accountBalance>-1.00</accountBalance>
+                              <reconciledBalance>0</reconciledBalance>
+                              <accountNumber></accountNumber>
+                              <bankId></bankId>
+                              <propertyMap id="282"/>
+                            </Account>
+                            <Account reference="265"/>
+                          </children>
+                          <transactions id="283"/>
+                          <securities id="284"/>
+                          <accountBalance>0</accountBalance>
+                          <reconciledBalance>0</reconciledBalance>
+                          <accountNumber></accountNumber>
+                          <bankId></bankId>
+                          <propertyMap id="285"/>
+                        </parentAccount>
+                        <excludedFromBudget>false</excludedFromBudget>
+                        <notes></notes>
+                        <currencyNode reference="5"/>
+                        <children id="286"/>
+                        <transactions id="287">
+                          <Transaction reference="260"/>
+                        </transactions>
+                        <securities id="288"/>
+                        <accountBalance>-1.00</accountBalance>
+                        <reconciledBalance>0</reconciledBalance>
+                        <accountNumber></accountNumber>
+                        <bankId></bankId>
+                        <propertyMap id="289"/>
+                      </debitAccount>
+                      <creditAccount reference="257"/>
+                      <creditAmount>1.00</creditAmount>
+                      <debitAmount>-1.00</debitAmount>
+                      <creditReconciled>NOT_RECONCILED</creditReconciled>
+                      <debitReconciled>NOT_RECONCILED</debitReconciled>
+                      <memo></memo>
+                    </TransactionEntry>
+                  </transactionEntries>
+                </Transaction>
+              </transactions>
+              <securities id="290"/>
+              <accountBalance>1.00</accountBalance>
+              <reconciledBalance>0</reconciledBalance>
+              <accountNumber></accountNumber>
+              <bankId></bankId>
+              <propertyMap id="291"/>
+            </Account>
+            <Account reference="276"/>
+          </children>
+          <transactions id="292"/>
+          <securities id="293"/>
           <accountBalance>0</accountBalance>
           <reconciledBalance>0</reconciledBalance>
           <accountNumber></accountNumber>
           <bankId></bankId>
-          <propertyMap id="259"/>
+          <propertyMap id="294"/>
         </Account>
-        <Account id="260" uuid="711ca737-43bb-4c0b-9126-e98753ba393a" placeHolder="false" locked="false" visible="true" name="ОБЯЗАТЕЛЬСТВА" description="Обязательства">
+        <Account id="295" uuid="711ca737-43bb-4c0b-9126-e98753ba393a" placeHolder="false" locked="false" visible="true" name="ОБЯЗАТЕЛЬСТВА" description="Обязательства">
           <accountType>CREDIT</accountType>
           <parentAccount class="RootAccount" reference="8"/>
           <excludedFromBudget>false</excludedFromBudget>
           <notes></notes>
-          <currencyNode reference="2"/>
-          <children id="261"/>
-          <transactions id="262"/>
-          <securities id="263"/>
+          <currencyNode reference="5"/>
+          <children id="296"/>
+          <transactions id="297"/>
+          <securities id="298"/>
           <accountBalance>0</accountBalance>
           <reconciledBalance>0</reconciledBalance>
           <accountNumber></accountNumber>
           <bankId></bankId>
-          <propertyMap id="264"/>
+          <propertyMap id="299"/>
         </Account>
-        <Account id="265" uuid="2020cc06-d6e0-477e-855c-e3840ef24004" placeHolder="false" locked="false" visible="true" name="ПАССИВЫ" description="Пассивы">
-          <accountType>EQUITY</accountType>
-          <parentAccount class="RootAccount" reference="8"/>
-          <excludedFromBudget>false</excludedFromBudget>
-          <notes></notes>
-          <currencyNode reference="2"/>
-          <children id="266"/>
-          <transactions id="267"/>
-          <securities id="268"/>
-          <accountBalance>0</accountBalance>
-          <reconciledBalance>0</reconciledBalance>
-          <accountNumber></accountNumber>
-          <bankId></bankId>
-          <propertyMap id="269"/>
-        </Account>
+        <Account reference="266"/>
       </children>
-      <transactions id="270"/>
-      <securities id="271"/>
+      <transactions id="300"/>
+      <securities id="301"/>
       <accountNumber></accountNumber>
-      <propertyMap id="272"/>
+      <propertyMap id="302"/>
     </RootAccount>
   </list>
 </object-stream>
