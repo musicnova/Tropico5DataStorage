@@ -1,7 +1,7 @@
 --РОБОТ ДЛЯ ТОРГОВЛИ НА БИРЖЕ НА СРОЧНОМ РЫНКЕ НА ОСНОВЕ ИНДИКАТОРА ПАРАБОЛИК
 --ВЕРСИЯ 2.0
 
-dofile(getScriptPath().."\\dll_RobotSAR.lua") -- файл с основными функциями
+dofile(getScriptPath().."\\02_dll_RobotSAR.lua") -- файл с основными функциями
 
 is_run = true
 Timer = 3
