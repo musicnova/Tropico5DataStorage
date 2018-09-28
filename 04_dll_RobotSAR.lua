@@ -17,10 +17,15 @@ function Body() --основная функция
 		CreateWindow(TableID)
 		PutDataToTableInit()
 	end
+	
+	--===== BEGIN DEBUG
+	-- message(tostring(getParamEx(Class,Emit,"STATUS").param_type),3) => 0
+	--===== END DEBUG
+	
 	local SessionStatus = tonumber(getParamEx(Class,Emit,"STATUS").param_value) -- NUMERIC
-	-- local SessionStatus2 = getParamEx(Class,Emit,"STATUS").param_image -- STRING
+	-- local SessionStatus = tonumber(getParamEx(Class,Emit,"STATUS").param_image) -- STRING
     if (SessionStatus~=1) then
-		Problem = "Сессия закрыта!" -- FIXME
+		Problem = "Сессия "..Emit.." на "..Class.." закрыта!" -- FIXME
 		Timer = 3
 		return
 	end
