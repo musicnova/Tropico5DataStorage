@@ -1,5 +1,5 @@
 --РОБОТ ДЛЯ ТОРГОВЛИ НА БИРЖЕ НА СРОЧНОМ РЫНКЕ НА ОСНОВЕ ИНДИКАТОРА ПАРАБОЛИК
---ВЕРСИЯ 4.0
+--ВЕРСИЯ 4.1
 
 --README https://arqatech.com/ru/products/quik/basic-sets/quik-broker-training-copy/#anchor-link
 --README https://arqatech.com/ru/support/files/
@@ -9,14 +9,22 @@ FileLog = getScriptPath().."\\FileLog.txt"
 is_run = true
 Timer = 3
 Problem = ""
-count = 1
+Slip = 20 -- это в шагах цены. Примеры ниже:
+
+SLIP_NEFT=0.2
+SLIP_RUB_USD=20
+SLIP_FOR_RTS=200
+
 DataTable = os.date("*t", os.time())
 
 --=====
 
 Class = "SPBFUT"
-Emit = "BRV8"
+--Emit = "BRV8"
+Emit = "LKZ8"
 MyAccount = "SPBFUT00a70"
+IdSAR = "SAR"
+IdPriceSAR = "PRICE_SAR"
 
 function OnInit()
 	--некие действия
