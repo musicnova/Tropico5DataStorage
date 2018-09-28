@@ -44,8 +44,8 @@ function Body() --основная функция
 	
 	SetCell(TableID,1,2,ServerTime)
 	SetCell(TableID,1,3,Problem)
-	PrintDbgStr(ServerTime.."\n"..tostring(count).."\n")
-	count = count + 1
+	-- PrintDbgStr(ServerTime.."\n".."\n")
+
 	--=====
 	
 	--находим текущую позицию по инструменту
@@ -59,8 +59,140 @@ function Body() --основная функция
 	--запишем текущие данные в таблицу робота
 	--запомнить текущую позицию
 	--все
-	
+
+	Problem = ""
+	local PosNow = PosNowFunc(Emit,MyAccount)
+	local Signal = SignalCheck()
+
+	if(PosNow~=0) then
+		CorrectPos(PosNow,0,Emit,MyAccount,Class,FileLog,"тест функции ",20)
+	end
+
+	PutDataToTable(PosNow)
 	sleep(1000)
+end
+
+function CorrectPos(posNow,posNeed,emit,acc,class,file,prevString,slip)
+	local vol = posNeed - posNow
+	if(vol==0) then
+		return 0
+	end
+	local buySell = ""
+	local price = 0
+	local last = tonumber(getParamEx(class,emit,"LAST").param_value)
+	local step = tonumber(getParamEx(class,emit,"SEC_PRICE_STEP").param_value)
+	if (vol>0) then
+		buySell = "B"
+		price = last + slip * step
+	else
+		buySell = "S"
+		price = last - slip * step
+	end
+	transaction = {
+			["ACTION"] = "NEW_ORDER",
+			["SECCODE"] = emit,
+			["ACCOUNT"] = acc,
+			["CLASSCODE"] = class,
+			["OPERATION"] = buySell,
+			["PRICE"] = tostring(price),
+			["QUANTITY"]=tostring(math.abs(vol)),
+			["TYPE"] = "L"
+		}
+	transaction.TRANS_ID = "123456"
+	transaction.CLIENT_CODE = "РОБОТ"
+	local result = sendTransaction(transaction)
+	local sDataString = ""
+	if (file ~= nil and file ~= "") then
+		sDataString = "Отклик транзакции = "..result.."; Pos= "..tostring(posNow).."; "
+	end
+	for key,val in pairs(transaction) do
+		sDataString = sDataString..key.."="..val.."; "
+	end
+	if (prevString ~= nil) then
+		sDataString = prevString..sDataString
+	end
+	WriteToEndOfFile(file,sDataString)
+	local count = 1
+	sleep(100)
+	for i=1,300 do
+		local posNew = PosNewFunc(emit,acc)
+		if(posNew==posNeed)then
+			Problem = "Сделка прошла за "..tostring(count*100).."мсек"
+			WriteToEndOfFile(file,Problem)
+			return 1
+		end
+		count = count + 1
+		sleep(100)
+	end
+	Problem = "Проблемы с транзакцией! EPIC FAIL!"
+	WriteToEndOfFile(file, Problem)
+	return nil
+end
+
+function RoundForStep(num,nStep)
+	if(nStep==nil or num==nil) then
+		return nil
+	elseif (nStep==0) then
+		return num
+	end
+	local ost=num % nStep
+	if (ost < nStep/2) then
+		return (math.floor(num/nStep)*nStep)
+	else
+		return (math.ceil(num/nStep)*nStep)
+	end
+end
+
+function SignFunc(num)
+	if (num>0) then
+		return 1
+	elseif (num<0) then
+		return -1
+	elseif (num==0) then
+		return 0
+	end
+end
+
+function SignalCheck()
+    local NumOfCandlesSAR = getNumCandles(IdSAR)
+	local NumOfCandlesPrice = getNumCandles(IdPriceSAR)
+	if(NumOfCandlesSAR==nil or NumOfCandlesPrice==nil) then
+		Problem = "нет вывода с графиков!"
+		return 0
+	end
+	local tSAR,nSAR,_ = getCandlesByIndex(IdSAR, 0, NumOfCandlesSAR-2,2)
+	local tPRICE,nPRICE,_ = getCandlesByIndex(IdPriceSAR,0,NumOfCandlesPrice-2,2)
+	if (nSAR~=2 and nPRICE~=2) then
+	    Problem = "нет вывода с графика!"
+		return 0
+	end
+	if (tSAR[0].close>tPRICE[0].close and tSAR[1].close<tPRICE[1].close) then
+	    return 2
+	elseif (tSAR[0].close<tPRICE[0].close and tSAR[1].close>tPRICE[1].close) then
+		return -2
+	elseif (tSAR[1].close<tPRICE[1].close) then
+		return 1
+	elseif (tSAR[1].close>tPRICE[1].close) then	
+		return -1
+	end
+	return 0
+end
+
+function PutDataToTable(posNow)
+    SetCell(TableID, 3, 2, tostring(posNow))
+end
+
+function PosNowFunc(emit,account)
+	local nSize = getNumberOf("futures_client_holding")
+	if (nSize~=nil) then
+	    for i=0,nSize-1 do
+			local row = getItem ("futures_client_holding",i)
+			if(row~=nil and row.sec_code==emit and row.trdaccid==account) then
+			    return tonumber(row.totalnet)
+			end
+		end
+	end
+	return 0
 end
 
 function PutDataToTableInit()
