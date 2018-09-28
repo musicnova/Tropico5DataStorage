@@ -3,7 +3,7 @@
 
 --README https://arqatech.com/ru/products/quik/basic-sets/quik-broker-training-copy/#anchor-link
 --README https://arqatech.com/ru/support/files/
-dofile(getScriptPath().."\\dll_RobotSAR.lua") -- файл с основными функциями
+dofile(getScriptPath().."\\04_dll_RobotSAR.lua") -- файл с основными функциями
 
 FileLog = getScriptPath().."\\FileLog.txt"
 is_run = true
