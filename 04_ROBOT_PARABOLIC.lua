@@ -1,7 +1,9 @@
 --РОБОТ ДЛЯ ТОРГОВЛИ НА БИРЖЕ НА СРОЧНОМ РЫНКЕ НА ОСНОВЕ ИНДИКАТОРА ПАРАБОЛИК
 --ВЕРСИЯ 4.0
 
-dofile(getScriptPath().."\\04_dll_RobotSAR.lua") -- файл с основными функциями
+--README https://arqatech.com/ru/products/quik/basic-sets/quik-broker-training-copy/#anchor-link
+--README https://arqatech.com/ru/support/files/
+dofile(getScriptPath().."\\dll_RobotSAR.lua") -- файл с основными функциями
 
 FileLog = getScriptPath().."\\FileLog.txt"
 is_run = true
@@ -12,9 +14,9 @@ DataTable = os.date("*t", os.time())
 
 --=====
 
-Class = "SBPFUT"
-Emit = "SiU7"
-MyAccount = "SBPFUT00a70"
+Class = "SPBFUT"
+Emit = "BRV8"
+MyAccount = "SPBFUT00a70"
 
 function OnInit()
 	--некие действия
