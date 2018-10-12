@@ -348,6 +348,14 @@ function CorrectPos(posNow,posNeed,emit,acc,class,file,prevString,slip)
 	end
 	Problem = "Проблемы с транзакцией! EPIC FAIL!"
 	WriteToEndOfFile(file, Problem)
+	-- Надо программу остановить
+	-- ДЗ логировать раз в час, что робот живой, парсить лог файл и отправлять alert на telegram !!!
+	message("EPIC FAIL!", 1)
+	is_run = false
+	-- ДЗ: Проверить правильность прохождения заявок по функциям обратного вызова
+	-- OnStopOrder(): логируем новую стоп заявку или изменение параметров
+	-- OnOrder(): новая заявка или изменение параметров
+	-- OnTrade(): новая сделка
 	return nil  -- когда упали
 end
 
