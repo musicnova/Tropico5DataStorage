@@ -1,5 +1,5 @@
 --РОБОТ ДЛЯ ТОРГОВЛИ НА БИРЖЕ НА СРОЧНОМ РЫНКЕ НА ОСНОВЕ ИНДИКАТОРА ПАРАБОЛИК
---ВЕРСИЯ 5.0
+--ВЕРСИЯ 5.1
 
 --README https://arqatech.com/ru/products/quik/basic-sets/quik-broker-training-copy/#anchor-link
 --README https://arqatech.com/ru/support/files/
@@ -22,7 +22,7 @@ DataTable = os.date("*t", os.time())
 --=====
 
 Class = "SPBFUT"
-Emit = "BRV8"
+Emit = "BRV8" -- ДЗ - научиться получать список !!!
 --Emit = "RIZ8"
 MyAccount = "SPBFUT00a70"
 IdSAR = "SAR"
